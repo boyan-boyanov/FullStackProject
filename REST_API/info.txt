@@ -1,0 +1,5 @@
+1. Първо инициализираме приложението с npm init -y в папката REST_API
+2. Инсталираме npm i express
+3. Създаваме index.js
+4. Инсталиране на nodemon
+5. Стартираме с nodemon index.js
