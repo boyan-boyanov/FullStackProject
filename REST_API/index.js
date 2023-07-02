@@ -5,7 +5,7 @@ const app = express();
 
 //тест дали работи
 app.get('/', (req, res) => {
-    res.json({message: 'Hello'});
+    res.json({message: 'It works'});
 })
 
-app.listen(3000, () => console.log('App listening on port 3000'));
+app.listen(3030, () => console.log('Rest Services started on port 3030'));
