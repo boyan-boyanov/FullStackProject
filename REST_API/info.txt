@@ -5,3 +5,4 @@
 5. Стартираме с nodemon index.js
 6. В папката която ще се къмитва се натиска ctrl + shft + p после се пише Publish to GitHub и се избира Private или Public
     преди това се прави README.md, ще поиска message за първия къмит.
+7. Инсталира се bcrypt, jsonwebtoken, mongoose
