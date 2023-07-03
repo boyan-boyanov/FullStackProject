@@ -47,10 +47,15 @@ async function updateById(id, item) {
     }
 }
 
+async function deleteById(id) {
+    await Item.findByIdAndDelete(id);
+}
+
 module.exports = {
     getAll,
     create,
     getById,
-    updateById
+    updateById,
+    deleteById
 };
 

@@ -65,4 +65,16 @@ router.put('/:id', async (req, res) => {
     }
 })
 
+router.delete('/:id', async (req, res) => {
+    const id = req.params.id;
+
+    try {
+        const result = await api.deleteById(id);
+        res.json(result);
+    } catch (error) {
+        console.log(error);
+        res.status(404).json({ message: `Item ${id} not found` })
+    }
+})
+
 module.exports = router;
