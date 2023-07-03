@@ -1,4 +1,4 @@
-
+const Item = require('../models/Item')
 
 async function getAll() {
     return Item.find({});
@@ -18,11 +18,37 @@ async function create(item) {
     await result.save();
 
     return result;
+};
 
+async function getById(id) {
+    const item = await Item.findById(id);
+
+    return item
+}
+
+async function updateById(id) {
+    const existing = Item.findById(id);
+
+    if (existing) {
+        existing.make = item.make,
+        existing.model = item.model,
+        existing.year = item.year,
+        existing.description = item.description,
+        existing.price = item.price,
+        existing.img = item.img,
+        existing.material = item.material
+
+        await existing.save();
+        return existing;
+    } else {
+        throw new Error("Furniture not found")
+    }
 }
 
 module.exports = {
     getAll,
-    create
-}
+    create,
+    getById,
+    updateById
+};
 
