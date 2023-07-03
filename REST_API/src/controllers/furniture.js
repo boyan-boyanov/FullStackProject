@@ -1,4 +1,5 @@
 const api = require('../services/furnitureService');
+const errorMapper = require('../util/errorMapper');
 
 const router = require('express').Router()
 
@@ -22,8 +23,9 @@ router.post('/', async (req, res) => {
         const result = await api.create(item);
         res.json(result);
     } catch (error) {
+        const message = errorMapper(error);
         console.log(error);
-        res.status(400).json({ message: '-Request error-' });
+        res.status(400).json({ message: message });
     }
 });
 
