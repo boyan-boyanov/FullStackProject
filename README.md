@@ -1,2 +1,1 @@
-Full-Stack Project
-TEST
+<center>Test centered text</center>
