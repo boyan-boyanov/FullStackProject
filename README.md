@@ -38,5 +38,7 @@
 > 
 
       function myName(partOfDay, distance){
-     //To Do...
+     //Двоен таб за писане на функция
      }
+
+      шеяш
