@@ -36,6 +36,7 @@
 
 > Ако са необходими насоки за решаване на задачата
 > 
-function myName(partOfDay, distance){
+
+   function myName(partOfDay, distance){
      //To Do...
      }
