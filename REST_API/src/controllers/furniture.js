@@ -8,7 +8,6 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-
     const item = {
         make: req.body.make,
         model: req.body.model,
@@ -16,15 +15,16 @@ router.post('/', async (req, res) => {
         description: req.body.description,
         price: req.body.price,
         img: req.body.img,
-        material: req.body.material
+        material: req.body.material,
+        _ownerId: req.user._id
     };
 
     try {
         const result = await api.create(item);
         res.json(result);
     } catch (error) {
+        console.error(error);
         const message = errorMapper(error);
-        console.log(error);
         res.status(400).json({ message: message });
     }
 });

@@ -54,6 +54,7 @@ function logout(token) {
 }
 
 function createSession(user) {
+    console.log(user._id);
     //create and sign payload
     const payload = {
         email: user.email,
@@ -72,7 +73,7 @@ function createSession(user) {
 }
 
 function validateToken(token) {
-    console.log(token);
+    //console.log(token);
     if(blacklist.has(token)){
         throw new Error('Token is blacklisted'); 
     }

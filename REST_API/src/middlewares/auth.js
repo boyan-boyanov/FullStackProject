@@ -1,5 +1,6 @@
 const { validateToken } = require("../services/userService")
 
+
 module.exports = () => (req, res, next) => {
     const token = req.headers['x-authorization'];
 
@@ -9,7 +10,7 @@ module.exports = () => (req, res, next) => {
 
             req.user = {
                 email: payload.email,
-                _id: payload.id,
+                _id: payload._id,
                 token
             };
         } catch (err) {
