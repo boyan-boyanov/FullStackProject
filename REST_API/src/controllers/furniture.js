@@ -6,7 +6,12 @@ const errorMapper = require('../util/errorMapper');
 
 
 router.get('/', async (req, res) => {
-    res.json(await api.getAll());
+    try {
+        res.json(await api.getAll(req.query.where));
+    } catch (error) {
+        res.status(400).json({message: 'Bad request'})
+    }
+   
 });
 
 router.post('/', isAuth(), async (req, res) => {
@@ -31,7 +36,7 @@ router.post('/', isAuth(), async (req, res) => {
     }
 });
 
-router.get('/:id', preload(), (req, res) => {
+router.get('/:id', preload(api), (req, res) => {
     res.json(res.locals.item);
 
     //All is now in PRELOAD
@@ -46,7 +51,7 @@ router.get('/:id', preload(), (req, res) => {
     // }
 })
 
-router.put('/:id', preload(), isOwner(), async (req, res) => {
+router.put('/:id', preload(api), isOwner(), async (req, res) => {
     const id = req.params.id;
 
     // res.locals.item == item
@@ -69,7 +74,7 @@ router.put('/:id', preload(), isOwner(), async (req, res) => {
     }
 })
 
-router.delete('/:id', preload(), isAuth(), isOwner(), async (req, res) => {
+router.delete('/:id', preload(api), isAuth(), isOwner(), async (req, res) => {
     const id = req.params.id;
 
     try {

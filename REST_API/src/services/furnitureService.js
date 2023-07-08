@@ -1,6 +1,11 @@
 const Item = require('../models/Item')
 
-async function getAll() {
+async function getAll(query) {
+    //use this query and if statement to return only isers publication
+    if (query) {
+        const userId = query.split('=')[1].slice(1, -1);
+        return Item.find({ _ownerId: userId });
+    }
     return Item.find({});
 }
 

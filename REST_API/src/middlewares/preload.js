@@ -1,9 +1,7 @@
-const { getById } = require("../services/furnitureService");
-
-module.exports = () => async (req, res, next) => {
+module.exports = (api) => async (req, res, next) => {
     const id = req.params.id;
+    const item = await api.getById(id);
 
-    const item = await getById(id);
     if (item) {
         res.locals.item = item;
         next();
