@@ -78,5 +78,7 @@ A logged-in user can see a list of their publications by clicking the link **“
 &nbsp;
 
 use npm i for client and for server
+
 start server with npm run start
+
 start client with npm run start
