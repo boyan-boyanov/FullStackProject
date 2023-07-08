@@ -1,7 +1,7 @@
+const router = require('express').Router()
 const api = require('../services/furnitureService');
 const errorMapper = require('../util/errorMapper');
 
-const router = require('express').Router()
 
 router.get('/', async (req, res) => {
     res.json(await api.getAll());

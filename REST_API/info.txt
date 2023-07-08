@@ -9,3 +9,10 @@
 
 
 8. Autentication.
+
+9. TESTS
+add in package.json
+"mocha": {
+    "spec": "test/**/*.js"
+  },
+Run test -> npx mocha ./test
