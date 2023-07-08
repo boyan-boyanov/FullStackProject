@@ -19,10 +19,10 @@ You can make requests to the following endpoints:
 &nbsp;
 
 ### **Guest** navigation example:
-![Guest navigation image]([some](https://github.com/boyan-boyanov/FullStackProject/blob/main/images/navGuest.png)
-![alt-text]([https://github.com/boyan-boyanov/FullStackProject/blob/main/dxcLogo.jpg]
+![Guest navigation image](https://github.com/boyan-boyanov/FullStackProject/edit/main/README.md)
+
 ### **Users** navigation example:
-![rrrrrrrrrr](some)
+![rrrrrrrrrr](some2)
 &nbsp;
 
 ### All Furniture
