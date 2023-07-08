@@ -2,6 +2,8 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const User = require('../models/User');
 
+const blacklist = new Set();
+
 //random secret code
 const JWT_SECRET = 'jasdfu98u9sfhkjsdfkj';
 
@@ -47,6 +49,10 @@ async function login(email, password) {
     return createSession(user);
 }
 
+function logout(token) {
+    blacklist.add(token);
+}
+
 function createSession(user) {
     //create and sign payload
     const payload = {
@@ -66,11 +72,16 @@ function createSession(user) {
 }
 
 function validateToken(token) {
+    console.log(token);
+    if(blacklist.has(token)){
+        throw new Error('Token is blacklisted'); 
+    }
     return jwt.verify(token, JWT_SECRET);
 }
 
 module.exports = {
     login,
     register,
-    validateToken
+    validateToken,
+    logout
 }
