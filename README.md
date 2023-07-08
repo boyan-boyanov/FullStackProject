@@ -74,9 +74,9 @@ By clicking on the "**Delete**" button the app needs **first confirmation for de
 ### My Furniture
 
 A logged-in user can see a list of their publications by clicking the link **“My Publications”** in the navigation bar. Display a page similar to the main catalog (dashboard), but only show the records that are associated with the currently logged-in user.
+
 &nbsp;
-&nbsp;
-&nbsp;
+
 use npm i for client and for server
 start server with npm run start
 start client with npm run start
