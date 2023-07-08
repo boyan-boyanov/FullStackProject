@@ -22,7 +22,7 @@ You can make requests to the following endpoints:
 ![Guest navigation image](https://github.com/boyan-boyanov/FullStackProject/blob/main/images/navGuest.png)
 
 ### **Users** navigation example:
-![Guest navigation image](https://github.com/boyan-boyanov/FullStackProject/blob/main/images/navGuest.png)
+![Guest navigation image](https://github.com/boyan-boyanov/FullStackProject/blob/main/images/loggedNav.png)
 &nbsp;
 
 ### All Furniture
@@ -45,7 +45,7 @@ If the **user has already registered**, the user can login by using **the login 
 The **logged-in user** can be **logged out** by clicking the **logout button**. Write the functionality for this action.
 
 ### Create Furniture
-![Guest navigation image](https://github.com/boyan-boyanov/FullStackProject/blob/main/images/navGuest.png)
+![Guest navigation image](https://github.com/boyan-boyanov/FullStackProject/blob/main/images/createItem.png)
 Validate fields:
 
  - Make and Model must be **at least 4 symbols long**
@@ -65,7 +65,7 @@ Get the **id** from the **URL**  and **display** the information. If **the logge
 ### Update Furniture
 
 If the **logged-in user** is **the creator** then can **edit** the furniture details. When the form is **loaded** **all the fields** must be **filled up** with the **information from the server**. **Validation** should be the same as the validation by creating new furniture. **PUT request** must be sent.
-![Guest navigation image](https://github.com/boyan-boyanov/FullStackProject/blob/main/images/navGuest.png)
+![Guest navigation image](https://github.com/boyan-boyanov/FullStackProject/blob/main/images/Details.png)
 
 ### Delete Furniture
 
