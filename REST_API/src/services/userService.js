@@ -53,8 +53,10 @@ function createSession(user) {
         email: user.email,
         _id: user._id
     }
-
-    const accessToken = jwt.sign(payload, JWT_SECRET);
+    //expire in 2 days
+    const accessToken = jwt.sign(payload, JWT_SECRET, {
+        expiresIn: '2d'
+    });
     //return token
     return {
         email: user.email,
@@ -63,7 +65,12 @@ function createSession(user) {
     }
 }
 
+function validateToken(token) {
+    return jwt.verify(token, JWT_SECRET);
+}
+
 module.exports = {
     login,
-    register
+    register,
+    validateToken
 }

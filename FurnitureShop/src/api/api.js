@@ -30,9 +30,11 @@ function getOptions(method = 'get', body) {
     };
 
     const token = sessionStorage.getItem('authToken');
+    
     if (token != null) {
         options.headers['X-Authorization'] = token;
     }
+    
 
     if (body) {
         options.headers['Content-Type'] = 'application/json';
