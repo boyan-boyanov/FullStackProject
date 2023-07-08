@@ -20,7 +20,7 @@ You can make requests to the following endpoints:
 
 ### **Guest** navigation example:
 ![Guest navigation image]([some](https://github.com/boyan-boyanov/FullStackProject/blob/main/images/navGuest.png)
-![alt-text](https://github.com/boyan-boyanov/FullStackProject/blob/main/dxcLogo.jpg)
+![alt-text]([https://github.com/boyan-boyanov/FullStackProject/blob/main/dxcLogo.jpg]
 ### **Users** navigation example:
 ![rrrrrrrrrr](some)
 &nbsp;
