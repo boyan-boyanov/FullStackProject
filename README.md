@@ -7,7 +7,7 @@ You can make requests to the following endpoints:
 
  -  Register User (POST): **http://localhost:3030/users/register**
  - Login User (POST): **http://localhost:3030/users/login**
- - Logout User (GET): [**http://localhost:3030/users/logout**
+ - Logout User (GET): **http://localhost:3030/users/logout**
 &nbsp;
 
  - Create Furniture (POST): **http://localhost:3030/data/catalog**
