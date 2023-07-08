@@ -15,4 +15,4 @@ userSchema.index({ email: 1 },{
 
 const User = model("User", userSchema);
 
-moduele.exports = User;
+module.exports = User;
