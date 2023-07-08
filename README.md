@@ -8,7 +8,7 @@
     - Express: The project employs Express as the web application framework for Node.js.
 
 The combination of these technologies enables the development of a full-stack web application with client-side interactivity, server-side logic, data persistence, and RESTful API implementation.
-
+&nbsp;
 <h1  align="center">Furniture Store Client Requirements</h1>
    
 
