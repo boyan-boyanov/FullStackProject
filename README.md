@@ -22,7 +22,7 @@ You can make requests to the following endpoints:
 ![Guest navigation image](https://github.com/boyan-boyanov/FullStackProject/blob/main/images/navGuest.png)
 
 ### **Users** navigation example:
-![rrrrrrrrrr](some2)
+![Guest navigation image](https://github.com/boyan-boyanov/FullStackProject/blob/main/images/navGuest.png)
 &nbsp;
 
 ### All Furniture
@@ -45,8 +45,7 @@ If the **user has already registered**, the user can login by using **the login 
 The **logged-in user** can be **logged out** by clicking the **logout button**. Write the functionality for this action.
 
 ### Create Furniture
-![rrrrrrrrrr](some)
-
+![Guest navigation image](https://github.com/boyan-boyanov/FullStackProject/blob/main/images/navGuest.png)
 Validate fields:
 
  - Make and Model must be **at least 4 symbols long**
@@ -60,14 +59,13 @@ By valid input, you can **add the "is-valid" class** to the input field, and **b
 If the creation is **successful** show **redirect to the dashboard page**.
 
 ### Furniture Details
-![rrrrrrrrrr](some)
-
+![Guest navigation image](https://github.com/boyan-boyanov/FullStackProject/blob/main/images/navGuest.png)
 Get the **id** from the **URL**  and **display** the information. If **the logged user is the creator** the buttons "**Edit**" and "**Delete**" should be **visible** (can be used), otherwise, they should not be visible.
 
 ### Update Furniture
 
 If the **logged-in user** is **the creator** then can **edit** the furniture details. When the form is **loaded** **all the fields** must be **filled up** with the **information from the server**. **Validation** should be the same as the validation by creating new furniture. **PUT request** must be sent.
-![rrrrrrrrrr](some)
+![Guest navigation image](https://github.com/boyan-boyanov/FullStackProject/blob/main/images/navGuest.png)
 
 ### Delete Furniture
 
