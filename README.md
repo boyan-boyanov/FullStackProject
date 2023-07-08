@@ -1,1 +1,1 @@
-<center>Test centered text</center>
+# Furniture Shop
