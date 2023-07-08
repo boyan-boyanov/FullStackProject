@@ -1,4 +1,6 @@
 const router = require('express').Router()
+const { isAuth, isOwner } = require('../middlewares/guards');
+const preload = require('../middlewares/preload');
 const api = require('../services/furnitureService');
 const errorMapper = require('../util/errorMapper');
 
@@ -7,7 +9,7 @@ router.get('/', async (req, res) => {
     res.json(await api.getAll());
 });
 
-router.post('/', async (req, res) => {
+router.post('/', isAuth(), async (req, res) => {
     const item = {
         make: req.body.make,
         model: req.body.model,
@@ -29,45 +31,45 @@ router.post('/', async (req, res) => {
     }
 });
 
-router.get('/:id', async (req, res) => {
-    const id = req.params.id;
+router.get('/:id', preload(), (req, res) => {
+    res.json(res.locals.item);
 
-    const item = await api.getById(id);
+    //All is now in PRELOAD
+    // const id = req.params.id;
 
-    if (item) {
-        res.json(item);
-    } else {
-        res.status(404).json({ message: `Item ${id} not found` })
-    }
+    // const item = await api.getById(id);
+
+    // if (item) {
+    //     res.json(item);
+    // } else {
+    //     res.status(404).json({ message: `Item ${id} not found` })
+    // }
 })
 
-router.put('/:id', async (req, res) => {
+router.put('/:id', preload(), isOwner(), async (req, res) => {
     const id = req.params.id;
 
-    const item = {
-        make: req.body.make,
-        model: req.body.model,
-        year: req.body.year,
-        description: req.body.description,
-        price: req.body.price,
-        img: req.body.img,
-        material: req.body.material
-    };
+    // res.locals.item == item
+    // const item = {
+    //     make: req.body.make,
+    //     model: req.body.model,
+    //     year: req.body.year,
+    //     description: req.body.description,
+    //     price: req.body.price,
+    //     img: req.body.img,
+    //     material: req.body.material
+    // };
 
     try {
-        const result = await api.updateById(id, item);
+        const result = await api.updateById(res.locals.item, req.body);
         res.json(result);
     } catch (error) {
-        if (error._notFound) {
-            res.status(404).json({ message: `Item ${id} not found` })
-        } else {
-            console.log(error);
-            res.status(400).json({ message: '-Request error-' });
-        }
+        console.log(error);
+        res.status(400).json({ message: '-Request error-' });
     }
 })
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', preload(), isAuth(), isOwner(), async (req, res) => {
     const id = req.params.id;
 
     try {

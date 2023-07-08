@@ -29,25 +29,18 @@ async function getById(id) {
     return item
 }
 
-async function updateById(id, item) {
-    const existing = await Item.findById(id);
+async function updateById(existing, item) {
+    //existing = if res.locals.item exist  
+    existing.make = item.make,
+        existing.model = item.model,
+        existing.year = item.year,
+        existing.description = item.description,
+        existing.price = item.price,
+        existing.img = item.img,
+        existing.material = item.material
 
-    if (existing) {
-        existing.make = item.make,
-            existing.model = item.model,
-            existing.year = item.year,
-            existing.description = item.description,
-            existing.price = item.price,
-            existing.img = item.img,
-            existing.material = item.material
-
-        await existing.save();
-        return existing;
-    } else {
-        const error = new Error('Furniture not found');
-        error._notFound = true;
-        throw error;
-    }
+    await existing.save();
+    return existing;
 }
 
 async function deleteById(id) {
