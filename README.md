@@ -1,3 +1,14 @@
+## Project Description
+
+### This project utilizes the following technologies:
+
+    - Vanilla JavaScript: The project leverages vanilla JavaScript for frontend development.
+    - Node.js: The project utilizes Node.js as the server-side runtime environment.
+    - MongoDB: The project integrates MongoDB as the database for data storage.
+    - Express: The project employs Express as the web application framework for Node.js.
+
+The combination of these technologies enables the development of a full-stack web application with client-side interactivity, server-side logic, data persistence, and RESTful API implementation.
+
 <h1  align="center">Furniture Store Client Requirements</h1>
    
 
