@@ -93,3 +93,4 @@ A logged-in user can see a list of their publications by clicking the link **“
 - use npm i for client and for server
 - start server with npm run start
 - start client with npm run start
+- start unit test in folder REST_API - npx mocha ./test
