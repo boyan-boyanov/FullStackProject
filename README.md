@@ -88,7 +88,7 @@ A logged-in user can see a list of their publications by clicking the link **“
 
 &nbsp;
 
-### How to run for test
+### How to run
 
 - use npm i for client and for server
 - start server with npm run start
